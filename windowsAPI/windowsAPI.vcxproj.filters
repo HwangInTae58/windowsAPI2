@@ -90,6 +90,9 @@
     <ClInclude Include="CObject_Player.h">
       <Filter>Engine\Object</Filter>
     </ClInclude>
+    <ClInclude Include="CMonster.h">
+      <Filter>Engine\Object</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="windowsAPI.cpp">
@@ -117,6 +120,9 @@
       <Filter>Engine\Manager</Filter>
     </ClCompile>
     <ClCompile Include="CObject_Player.cpp">
+      <Filter>Engine\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="CMonster.cpp">
       <Filter>Engine\Object</Filter>
     </ClCompile>
   </ItemGroup>
