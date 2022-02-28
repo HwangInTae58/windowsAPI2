@@ -4,7 +4,6 @@ class CGameObject
 private:
 	fPoint m_fptPos;
 	fPoint m_fptScale;
-
 public:
 	CGameObject();
 	virtual ~CGameObject();

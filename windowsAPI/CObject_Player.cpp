@@ -4,23 +4,28 @@
 
 void CObject_Player::update()
 {
+	//GetPos로 가져와서 수정
+	fPoint fpt = GetPos();
 	if (CKeyManager::getInst()->GetButton(VK_LEFT))
 	{
-		m_fptPos.x -= 300.f * DT;
+		fpt.x -= 300.f * (float)DT;
 	}
 
 	if (CKeyManager::getInst()->GetButton(VK_RIGHT))
 	{
-		m_fptPos.x += 300.f * DT;
+		fpt.x += 300.f * (float)DT;
 	}
 
 	if (CKeyManager::getInst()->GetButton(VK_UP))
 	{
-		m_fptPos.y -= 300.f * DT;
+		fpt.y -= 300.f * (float)DT;
 	}
 
 	if (CKeyManager::getInst()->GetButton(VK_DOWN))
 	{
-		m_fptPos.y += 300.f * DT;
+		fpt.y += 300.f * (float)DT;
 	}
+	// GetPos 지역변수이므로 SetPos로 수정한 것을 세팅해줌
+	SetPos(fpt);
+
 }

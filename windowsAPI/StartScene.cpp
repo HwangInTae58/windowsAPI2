@@ -1,7 +1,7 @@
 #include "framework.h"
 #include "StartScene.h"
 #include "CGameObject.h"
-
+#include "CObject_Player.h"
 
 
 StartScene::StartScene()
@@ -17,7 +17,7 @@ StartScene::~StartScene()
 void StartScene::Enter()
 {
 	// object Ãß°¡
-	CGameObject* pObj = new CGameObject;
+	CGameObject* pObj = new CObject_Player;
 
 	pObj->SetPos(fPoint(640.f,360.f));
 	pObj->SetScale(fPoint(75.f,75.f));
