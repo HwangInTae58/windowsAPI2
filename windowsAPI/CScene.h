@@ -26,7 +26,7 @@ private:
 	// wstring : wchar_t가 string 문자열로 들어간 타입
 	wstring		m_strName;	//Scene 이름
 
-protected:
+public:
 	void AddObject(CGameObject* _pObj, GROUP_TYPE _eType);
 
 };

@@ -9,7 +9,7 @@ private:
 	//왓다갔다 할때의 범위를 구하는것
 	fPoint m_fCenterPos;
 	float m_fMaxrepeat;
-	int iDir; //왼쪽일지 오른쪽일지의 진행방향
+	float iDir; //왼쪽일지 오른쪽일지의 진행방향
 
 public:
 	CMonster();

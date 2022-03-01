@@ -78,6 +78,8 @@ enum class SCENE_TYPE
 //========================================
 //##			메크로				##
 //========================================
+
+// TODO : 여기 키값 메크로 하나도 안먹히는 이유를 모르겠어요.
 #define KEY(vk_key)					CKeyManager::getInst()->GetButton(vk_key);
 #define KEYDOWN(vk_key)				CKeyManager::getInst()->GetButtonDown(vk_key);
 #define KEYUP(vk_key)				CKeyManager::getInst()->GetButtonUP(vk_key);

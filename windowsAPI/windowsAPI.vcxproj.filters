@@ -99,6 +99,9 @@
     <ClInclude Include="CMonster.h">
       <Filter>Engine\Object</Filter>
     </ClInclude>
+    <ClInclude Include="CMissile.h">
+      <Filter>Engine\Object</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="windowsAPI.cpp">
@@ -129,6 +132,9 @@
       <Filter>Engine\Object</Filter>
     </ClCompile>
     <ClCompile Include="CMonster.cpp">
+      <Filter>Engine\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="CMissile.cpp">
       <Filter>Engine\Object</Filter>
     </ClCompile>
   </ItemGroup>

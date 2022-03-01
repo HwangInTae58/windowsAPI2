@@ -155,6 +155,7 @@
     <ClInclude Include="CCore.h" />
     <ClInclude Include="CGameObject.h" />
     <ClInclude Include="CKeyManager.h" />
+    <ClInclude Include="CMissile.h" />
     <ClInclude Include="CMonster.h" />
     <ClInclude Include="CObject_Player.h" />
     <ClInclude Include="CScene.h" />
@@ -172,6 +173,7 @@
     <ClCompile Include="CCore.cpp" />
     <ClCompile Include="CGameObject.cpp" />
     <ClCompile Include="CKeyManager.cpp" />
+    <ClCompile Include="CMissile.cpp" />
     <ClCompile Include="CMonster.cpp" />
     <ClCompile Include="CObject_Player.cpp" />
     <ClCompile Include="CScene.cpp" />
