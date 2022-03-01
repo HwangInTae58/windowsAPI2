@@ -23,10 +23,11 @@ void StartScene::Enter()
 	pObj->SetScale(fPoint(75.f,75.f));
 	AddObject(pObj, GROUP_TYPE::Default);
 
-	pObj = new CMonster;
-	pObj->SetPos(fPoint(640.f, 360.f));
-	pObj->SetScale(fPoint(100.f, 75.f));
-	AddObject(pObj, GROUP_TYPE::Default);
+	CMonster* pMObj = new CMonster;
+	pMObj->SetPos(fPoint(1200.f, 360.f));
+	pMObj->SetCenterPos(pMObj->GetPos());
+	pMObj->SetScale(fPoint(100.f, 75.f));
+	AddObject(pMObj, GROUP_TYPE::Default);
 
 	
 }

@@ -46,6 +46,12 @@
     <Filter Include="Engine\Object">
       <UniqueIdentifier>{91164c1d-fc2a-4969-a1ef-f837844e5f08}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Component">
+      <UniqueIdentifier>{16c04ca0-163c-4cf7-b23b-e864901565fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Collider">
+      <UniqueIdentifier>{874c3b85-0c61-4954-a9be-9681fb40bbbf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">

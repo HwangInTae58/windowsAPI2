@@ -4,11 +4,11 @@
 class CMonster : public CGameObject
 {
 private:
-	float f_mSpeed;
+	float m_fSpeed;
 
 	//왓다갔다 할때의 범위를 구하는것
-	fPoint f_CenterPos;
-	float f_repeat;
+	fPoint m_fCenterPos;
+	float m_fMaxrepeat;
 	int iDir; //왼쪽일지 오른쪽일지의 진행방향
 
 public:
