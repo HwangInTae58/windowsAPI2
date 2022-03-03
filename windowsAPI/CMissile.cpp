@@ -14,7 +14,7 @@ void CMissile::update()
 {
 	fPoint fPos = GetPos();
 
-	fPos.x += 200.f * iDir * DT;
+	fPos.x += 300.f * iDir * (float)DT;
 
 	SetPos(fPos);
 }
