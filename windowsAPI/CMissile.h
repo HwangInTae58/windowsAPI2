@@ -3,7 +3,8 @@
 class CMissile : public CGameObject
 {
 private:
-	float iDir; //미사일이 날라가는 방향
+	//미사일이 날아가는 방향을 각도로 정한다
+	float m_fTheta; // 미사일이 날아가는 각도
 
 public:
 	CMissile();

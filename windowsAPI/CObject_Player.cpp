@@ -44,13 +44,12 @@ void CObject_Player::CreateMissile()
 	fMissilePos.x += GetScale().x / 2.f;
 	//미사일 오브젝트 생성
 	CMissile* missile1 = new CMissile;
-
 	//오브젝트 생성위치
 	missile1->SetPos(fMissilePos);
 	//오브젝트 크기 설정
 	missile1->SetScale(fPoint(15.f, 15.f));
 	//오브젝트의 움직이는 위치설정
-	missile1->SetDir(true);
+	
 
 	CScene* pCurScene =	CSceneManager::getInst()->GetCurScene();
 	pCurScene->AddObject(missile1,GROUP_TYPE::Default);

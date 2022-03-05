@@ -3,7 +3,7 @@
 
 CMissile::CMissile()
 {
-	iDir = 1;
+	m_fTheta = (PHI);
 }
 
 CMissile::~CMissile()
@@ -13,8 +13,9 @@ CMissile::~CMissile()
 void CMissile::update()
 {
 	fPoint fPos = GetPos();
-
-	fPos.x += 300.f * iDir * (float)DT;
+	//x¿¡ cos y¿¡ sin
+	fPos.x -= 300.f * cos(m_fTheta)* (float)DT;
+	fPos.y += 300.f * sin(m_fTheta) * (float)DT;
 
 	SetPos(fPos);
 }
@@ -28,14 +29,7 @@ void CMissile::render(HDC hDC)
 			, (int)(m_fptPos.x + m_fptScale.x / 2.f), (int)(m_fptPos.y + m_fptScale.y / 2.f));
 }
 
-void CMissile::SetDir(bool _Right)
+void CMissile::SetDir(bool fTheta)
 {
-	if (_Right)
-	{
-		iDir = 1.f;
-	}
-	else
-	{
-		iDir = -1.f;
-	}
+	m_fTheta = fTheta;
 }
