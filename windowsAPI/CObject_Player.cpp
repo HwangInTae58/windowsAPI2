@@ -38,6 +38,9 @@ void CObject_Player::update()
 
 void CObject_Player::CreateMissile()
 {
+
+	CScene* pCurScene = CSceneManager::getInst()->GetCurScene();
+
 	//만들어지는 미사일의 위치를 플레이어 기준으로 하고
 	fPoint fMissilePos = GetPos();
 	// 플레이어의 플러스 x좌표의 반쯤에서 생성
@@ -49,9 +52,16 @@ void CObject_Player::CreateMissile()
 	//오브젝트 크기 설정
 	missile1->SetScale(fPoint(15.f, 15.f));
 	//오브젝트의 움직이는 위치설정
-	
+	missile1->SetDir(fvec(1.f, 0.f));
+	pCurScene->AddObject(missile1, GROUP_TYPE::Default);
 
-	CScene* pCurScene =	CSceneManager::getInst()->GetCurScene();
-	pCurScene->AddObject(missile1,GROUP_TYPE::Default);
+	CMissile* missile2 = new CMissile;
+	missile2->SetPos(fMissilePos);
+	missile2->SetScale(fPoint(25.f, 25.f));
+	missile2->SetDir(fvec(1.f, -1.f));
+	pCurScene->AddObject(missile2, GROUP_TYPE::Default);
+	
+	
+	
 
 }

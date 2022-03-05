@@ -31,9 +31,20 @@ struct fvec
 		this->x = x;
 		this->y = y;
 	}
-
-	void hypotenuse()
+	
+	fvec& Normalize()
 	{
-		// return x * x + y * y;
+		// sqrt : 루트 함수
+		// length 에 x와 y를 각각 나누면 1이 된다.
+		float length = sqrt(x * x + y * y);
+
+		//에초에 0이 나오면 계산자체가 안되기 때문에 assert사용
+		// 0이 아니라면 true로 진행0이라면 null이 뜨면서 트리거
+		assert(length != 0.f);
+		x /= length;
+		y /= length;
+		
+
+		return *this;
 	}
 };
