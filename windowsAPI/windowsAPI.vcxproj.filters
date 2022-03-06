@@ -102,6 +102,15 @@
     <ClInclude Include="CMissile.h">
       <Filter>Engine\Object</Filter>
     </ClInclude>
+    <ClInclude Include="CRes.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="CSound.h">
+      <Filter>Resource\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="CTexture.h">
+      <Filter>Resource\Texture</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="windowsAPI.cpp">
@@ -136,6 +145,15 @@
     </ClCompile>
     <ClCompile Include="CMissile.cpp">
       <Filter>Engine\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="CRes.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="CSound.cpp">
+      <Filter>Resource\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="CTexture.cpp">
+      <Filter>Resource\Texture</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
