@@ -165,6 +165,7 @@
     <ClInclude Include="CTexture.h" />
     <ClInclude Include="CTimeManager.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="PathManager.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="SingleTon.h" />
     <ClInclude Include="StartScene.h" />
@@ -185,6 +186,7 @@
     <ClCompile Include="CSound.cpp" />
     <ClCompile Include="CTexture.cpp" />
     <ClCompile Include="CTimeManager.cpp" />
+    <ClCompile Include="PathManager.cpp" />
     <ClCompile Include="StartScene.cpp" />
     <ClCompile Include="windowsAPI.cpp" />
   </ItemGroup>

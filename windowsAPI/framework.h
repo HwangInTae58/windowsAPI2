@@ -63,6 +63,7 @@ enum class SCENE_TYPE
 #include "CTimeManager.h"
 #include "CKeyManager.h"
 #include "CSceneManager.h"
+#include "PathManager.h"
 //========================================
 //##			디파인문				##
 //========================================

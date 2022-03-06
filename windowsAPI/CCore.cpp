@@ -24,6 +24,7 @@ CCore::~CCore()
 void CCore::update()
 {
 	//씬 매니저 업데이트
+	PathManager::getInst()->update();
 	CTimeManager::getInst()->update();
 	CKeyManager::getInst()->update();
 	CSceneManager::getInst()->update();

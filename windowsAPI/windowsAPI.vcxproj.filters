@@ -52,6 +52,15 @@
     <Filter Include="Component\Collider">
       <UniqueIdentifier>{874c3b85-0c61-4954-a9be-9681fb40bbbf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Object\Missile">
+      <UniqueIdentifier>{398951dc-11b5-4f6c-9b6c-f5857519ad7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Object\Player">
+      <UniqueIdentifier>{8507c4fc-77ce-4374-b65f-6ca41ee16561}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Object\Monster">
+      <UniqueIdentifier>{d5c7c7a5-a5d4-4ee8-acf5-0b04dc01b7dc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -93,15 +102,6 @@
     <ClInclude Include="CSceneManager.h">
       <Filter>Engine\Manager</Filter>
     </ClInclude>
-    <ClInclude Include="CObject_Player.h">
-      <Filter>Engine\Object</Filter>
-    </ClInclude>
-    <ClInclude Include="CMonster.h">
-      <Filter>Engine\Object</Filter>
-    </ClInclude>
-    <ClInclude Include="CMissile.h">
-      <Filter>Engine\Object</Filter>
-    </ClInclude>
     <ClInclude Include="CRes.h">
       <Filter>Resource</Filter>
     </ClInclude>
@@ -110,6 +110,18 @@
     </ClInclude>
     <ClInclude Include="CTexture.h">
       <Filter>Resource\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="CMissile.h">
+      <Filter>Engine\Object\Missile</Filter>
+    </ClInclude>
+    <ClInclude Include="CObject_Player.h">
+      <Filter>Engine\Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CMonster.h">
+      <Filter>Engine\Object\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="PathManager.h">
+      <Filter>Engine\Manager</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -137,15 +149,6 @@
     <ClCompile Include="CSceneManager.cpp">
       <Filter>Engine\Manager</Filter>
     </ClCompile>
-    <ClCompile Include="CObject_Player.cpp">
-      <Filter>Engine\Object</Filter>
-    </ClCompile>
-    <ClCompile Include="CMonster.cpp">
-      <Filter>Engine\Object</Filter>
-    </ClCompile>
-    <ClCompile Include="CMissile.cpp">
-      <Filter>Engine\Object</Filter>
-    </ClCompile>
     <ClCompile Include="CRes.cpp">
       <Filter>Resource</Filter>
     </ClCompile>
@@ -154,6 +157,18 @@
     </ClCompile>
     <ClCompile Include="CTexture.cpp">
       <Filter>Resource\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="CMissile.cpp">
+      <Filter>Engine\Object\Missile</Filter>
+    </ClCompile>
+    <ClCompile Include="CObject_Player.cpp">
+      <Filter>Engine\Object\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="CMonster.cpp">
+      <Filter>Engine\Object\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="PathManager.cpp">
+      <Filter>Engine\Manager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

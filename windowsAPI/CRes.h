@@ -6,6 +6,16 @@ private:
 	wstring m_strKey;	//리소스 키 (가져올 리소스에 대한 문자열)
 	wstring m_strRelativePath; //리소스 상대 경로
 
+public:
+	CRes();
+	virtual ~CRes();
+
+	void SetKey(wstring& strKey);
+	void SetRekativePath(wstring& strPath);
+
+	const wstring& GetKey();
+	const wstring& GetRekativePath();
+
 
 };
 
