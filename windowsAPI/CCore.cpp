@@ -24,7 +24,7 @@ CCore::~CCore()
 void CCore::update()
 {
 	//씬 매니저 업데이트
-	PathManager::getInst()->update();
+	
 	CTimeManager::getInst()->update();
 	CKeyManager::getInst()->update();
 	CSceneManager::getInst()->update();
@@ -37,9 +37,14 @@ void CCore::render()
 {
 
 	Rectangle(m_hMemDC, -1, -1, WINSIZEX + 1, WINSIZEY + 1);
-	
 	//씬 매니저 렌더
 	CSceneManager::getInst()->render(m_hMemDC);
+
+	// 오른쪽 상단에 FPS 표시
+	WCHAR strFPS[6];
+	swprintf_s(strFPS, L"%5d", CTimeManager::getInst()->GetFPS());
+	TextOutW(m_hMemDC, WINSIZEX - 50, 10, strFPS, 5);
+
 	// memDC에 그린 작업을 다시 윈도우 DC로 복사
 	BitBlt(m_hDC, 0, 0, WINSIZEX, WINSIZEY, m_hMemDC, 0, 0, SRCCOPY);
 	
@@ -48,6 +53,7 @@ void CCore::render()
 void CCore::init()
 {
 	// 게임(매니저) 초기화 작업 진행
+	PathManager::getInst()->init();
 	CTimeManager::getInst()->init();
 	CKeyManager::getInst()->init();
 	CSceneManager::getInst()->init();
