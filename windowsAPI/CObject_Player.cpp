@@ -64,13 +64,14 @@ void CObject_Player::render(HDC hDC)
 	
 	fPoint fPos = GetPos();
 
-	
-	TransparentBlt(hDC,
-		int(fPos.x - (float)(iWidth / 2)),
-		int(fPos.y - (float)(iHeight / 2)),
+	//TransparentBlt : 내가 지정한 조건을 투명처리
+	TransparentBlt(hDC,							//자신이 그릴 목적지
+		int(fPos.x - (float)(iWidth / 2)),		//좌상단
+		int(fPos.y - (float)(iHeight / 2)),		//
 		iWidth, iHeight,
-		m_pTex->GetDC(),
-		0, 0, iWidth, iHeight,
+		m_pTex->GetDC(),						//옮겨찍을 원본 DC
+		0, 0, 
+		iWidth, iHeight,						//옮길때의 사진 크기? 자르지 않고 찍을거라 전체 지정
 		RGB(255, 0, 255));
 }
 
