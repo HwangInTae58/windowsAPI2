@@ -65,14 +65,13 @@ void CObject_Player::render(HDC hDC)
 	fPoint fPos = GetPos();
 
 	
-	BitBlt(hDC,
+	TransparentBlt(hDC,
 		int(fPos.x - (float)(iWidth / 2)),
 		int(fPos.y - (float)(iHeight / 2)),
 		iWidth, iHeight,
 		m_pTex->GetDC(),
-		0, 0,
-		SRCCOPY
-	);
+		0, 0, iWidth, iHeight,
+		RGB(255, 0, 255));
 }
 
 
