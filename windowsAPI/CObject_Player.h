@@ -20,6 +20,6 @@ private:
 	
 
 	void CreateMissile();
-
+	void CreateGrenade();
 };
 

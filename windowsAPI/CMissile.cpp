@@ -18,8 +18,8 @@ void CMissile::update()
 {
 	fPoint fPos = GetPos();
 	//x¿¡ cos y¿¡ sin
-	fPos.x += 30.f * m_vDir.x * (float)DT;
-	fPos.y += 30.f * m_vDir.y * (float)DT;
+	fPos.x += 500.f * m_vDir.x * (float)DT;
+	fPos.y += 500.f * m_vDir.y * (float)DT;
 
 	SetPos(fPos);
 }
