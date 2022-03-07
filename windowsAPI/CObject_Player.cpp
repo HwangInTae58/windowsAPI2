@@ -2,6 +2,26 @@
 #include "CObject_Player.h"
 #include "CScene.h"
 #include "CMissile.h"
+#include "PathManager.h"
+#include "CTexture.h"
+
+CObject_Player::CObject_Player()
+{
+	
+	//Texture 로딩하기
+	m_pTex = new CTexture;
+	wstring strFilepath = PathManager::getInst()->GetContentPath();
+	strFilepath += L"texture\\Player.bmp";
+	m_pTex->Load(strFilepath);
+}
+
+CObject_Player::~CObject_Player()
+{
+	if (nullptr != m_pTex)
+	{
+		delete m_pTex;
+	}
+}
 
 void CObject_Player::update()
 {
@@ -36,6 +56,26 @@ void CObject_Player::update()
 
 }
 
+void CObject_Player::render(HDC hDC)
+{
+	// 값이 이상해질수 있으므로 정수(int)로 형변환
+	int iWidth = (int)m_pTex->Width();
+	int iHeight = (int)m_pTex->Height();
+	
+	fPoint fPos = GetPos();
+
+	
+	BitBlt(hDC,
+		int(fPos.x - (float)(iWidth / 2)),
+		int(fPos.y - (float)(iHeight / 2)),
+		iWidth, iHeight,
+		m_pTex->GetDC(),
+		0, 0,
+		SRCCOPY
+	);
+}
+
+
 void CObject_Player::CreateMissile()
 {
 
@@ -60,8 +100,4 @@ void CObject_Player::CreateMissile()
 	missile2->SetScale(fPoint(25.f, 25.f));
 	missile2->SetDir(fvec(1.f, -1.f));
 	pCurScene->AddObject(missile2, GROUP_TYPE::Default);
-	
-	
-	
-
 }
