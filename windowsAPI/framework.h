@@ -80,17 +80,13 @@ enum class SCENE_TYPE
 //========================================
 //##			메크로				##
 //========================================
-
-// TODO : 여기 키값 메크로 하나도 안먹히는 이유를 모르겠어요.
-#define KEY(vk_key)					CKeyManager::getInst()->GetButton(vk_key);
-#define KEYDOWN(vk_key)				CKeyManager::getInst()->GetButtonDown(vk_key);
-#define KEYUP(vk_key)				CKeyManager::getInst()->GetButtonUP(vk_key);
-
 #define DT							CTimeManager::getInst()->GetDT();
 
 #define PHI 3.141592
 
-
+#define Key(key)		CKeyManager::getInst()->GetButton(key)
+#define KeyUP(key)		CKeyManager::getInst()->GetButtonUp(key)
+#define KeyDown(key)	CKeyManager::getInst()->GetButtonDown(key)
 
 //========================================
 //## 전역변수(인스턴스, 윈도우 핸들)	##

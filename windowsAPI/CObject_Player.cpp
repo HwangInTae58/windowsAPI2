@@ -4,15 +4,12 @@
 #include "CMissile.h"
 #include "PathManager.h"
 #include "CTexture.h"
+#include "CResManager.h"
 
 CObject_Player::CObject_Player()
 {
-	
-	//Texture 로딩하기
-	m_pTex = new CTexture;
-	wstring strFilepath = PathManager::getInst()->GetContentPath();
-	strFilepath += L"texture\\Player.bmp";
-	m_pTex->Load(strFilepath);
+	// Resource Manager를 통한 Texture 로딩하기
+	m_pTex = CResManager::getInst()->LoadTexture(L"PlayerTex", L"texture\\Player.bmp");
 }
 
 CObject_Player::~CObject_Player()
@@ -27,32 +24,32 @@ void CObject_Player::update()
 {
 	//GetPos로 가져와서 수정
 	fPoint fpt = GetPos();
-	if (CKeyManager::getInst()->GetButton(VK_LEFT))
+	if (Key(VK_LEFT))
 	{
 		fpt.x -= 300.f * (float)DT;
 	}
 
-	if (CKeyManager::getInst()->GetButton(VK_RIGHT))
+	if (Key(VK_RIGHT))
 	{
 		fpt.x += 300.f * (float)DT;
 	}
 
-	if (CKeyManager::getInst()->GetButton(VK_UP))
+	if (Key(VK_UP))
 	{
 		fpt.y -= 300.f * (float)DT;
 	}
 
-	if (CKeyManager::getInst()->GetButton(VK_DOWN))
+	if (Key(VK_DOWN))
 	{
 		fpt.y += 300.f * (float)DT;
 	}
-
-	if (CKeyManager::getInst()->GetButtonDown(VK_SPACE))
+	
+	if (KeyDown(VK_SPACE))
 	{
 		CreateMissile();
 	}
 	
-	if (CKeyManager::getInst()->GetButtonDown(VK_LSHIFT))
+	if (KeyDown(VK_LSHIFT))
 	{
 		CreateGrenade();
 	}

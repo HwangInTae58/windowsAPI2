@@ -11,7 +11,7 @@ public:
 	virtual ~CRes();
 
 	void SetKey(wstring& strKey);
-	void SetRekativePath(wstring& strPath);
+	void SetRelativePath(wstring& strPath);
 
 	const wstring& GetKey();
 	const wstring& GetRekativePath();
