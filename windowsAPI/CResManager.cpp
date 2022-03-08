@@ -35,6 +35,7 @@ CTexture* CResManager::LoadTextrue(const wstring &strKey, const wstring&strRelat
 	// Texture 생성 후 저장
 	pTex = new CTexture;
 	pTex->Load(strFilePath);
+	// TODO : 오류 고치는거 찾아봐야됨
 	pTex->SetKey(strKey);
 	pTex->SetRelativePath(strRelativePath);
 
