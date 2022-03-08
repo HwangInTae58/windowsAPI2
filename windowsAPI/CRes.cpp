@@ -9,12 +9,12 @@ CRes::~CRes()
 {
 }
 
-void CRes::SetKey(wstring &strKey)
+void CRes::SetKey(const wstring &strKey)
 {
 	m_strKey = strKey;
 }
 
-void CRes::SetRelativePath(wstring &strPath)
+void CRes::SetRelativePath(const wstring &strPath)
 {
 	m_strRelativePath = strPath;
 }

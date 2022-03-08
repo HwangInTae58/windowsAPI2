@@ -10,8 +10,8 @@ public:
 	CRes();
 	virtual ~CRes();
 
-	void SetKey(wstring& strKey);
-	void SetRelativePath(wstring& strPath);
+	void SetKey(const wstring& strKey);
+	void SetRelativePath(const wstring& strPath);
 
 	const wstring& GetKey();
 	const wstring& GetRekativePath();

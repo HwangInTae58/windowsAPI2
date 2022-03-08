@@ -9,7 +9,7 @@
 CObject_Player::CObject_Player()
 {
 	// Resource Manager를 통한 Texture 로딩하기
-	m_pTex = CResManager::getInst()->LoadTexture(L"PlayerTex", L"texture\\Player.bmp");
+	m_pTex = CResManager::getInst()->LoadTextrue(L"PlayerTex", L"texture\\Player.bmp");
 }
 
 CObject_Player::~CObject_Player()

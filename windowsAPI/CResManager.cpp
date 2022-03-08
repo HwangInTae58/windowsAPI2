@@ -1,7 +1,8 @@
 #include "framework.h"
 #include "CResManager.h"
-#include "PathManager.h"
 #include "CTexture.h"
+#include "PathManager.h"
+
 
 CResManager::CResManager()
 {
@@ -20,7 +21,7 @@ CResManager::~CResManager()
 	m_mapTex.clear();
 }
 
-CTexture* CResManager::LoadTextrue(const wstring &strKey, const wstring&strRelativePath)
+CTexture* CResManager::LoadTextrue(const wstring& strKey, const wstring& strRelativePath)
 {
 	// Texture를 불러오기 전 자료구조에 이미 Texture가 있는지 확인
 	CTexture* pTex = FindTexture(strKey);
@@ -35,7 +36,6 @@ CTexture* CResManager::LoadTextrue(const wstring &strKey, const wstring&strRelat
 	// Texture 생성 후 저장
 	pTex = new CTexture;
 	pTex->Load(strFilePath);
-	// TODO : 오류 고치는거 찾아봐야됨
 	pTex->SetKey(strKey);
 	pTex->SetRelativePath(strRelativePath);
 
@@ -54,3 +54,5 @@ CTexture* CResManager::FindTexture(const wstring& _strKey)
 	return iter->second;
 
 }
+
+
