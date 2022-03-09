@@ -1,9 +1,15 @@
 #pragma once
+
+class CCollider;
+
 class CGameObject
 {
 private:
 	fPoint m_fptPos;
 	fPoint m_fptScale;
+
+	//포인트 변수로 만들어 충돌체(Collider)가 필요 없으면 nullptr로 사용하여 자식클래스가 안쓰게 할 수있다.
+	CCollider* m_pClloder;
 public:
 	CGameObject();
 	virtual ~CGameObject();
@@ -18,5 +24,7 @@ public:
 
 	fPoint GetPos();
 	fPoint GetScale();
+
+	void CreateCollider();
 };
 

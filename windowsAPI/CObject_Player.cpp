@@ -14,10 +14,7 @@ CObject_Player::CObject_Player()
 
 CObject_Player::~CObject_Player()
 {
-	if (nullptr != m_pTex)
-	{
-		delete m_pTex;
-	}
+	
 }
 
 void CObject_Player::update()
