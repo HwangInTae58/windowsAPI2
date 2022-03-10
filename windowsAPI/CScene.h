@@ -18,6 +18,7 @@ public:
 	const wstring& GetName();
 
 	void update();
+	void finalupdate(); // 오브젝트의 움직임 같은 것을 완전히 확정짓는 update
 	void render(HDC hDc);
 private:
 	//오브젝트를 저장 및 관리할 벡터를 그룹 개수만큼 선언

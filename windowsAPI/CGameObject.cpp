@@ -1,20 +1,29 @@
 #include "framework.h"
 #include "CGameObject.h"
-
+#include "CCollider.h"
 
 CGameObject::CGameObject()
 {
+	m_fptPos = {};
+	m_fptScale = {};
+	m_pCollider = nullptr;
 }
 
 
 CGameObject::~CGameObject()
 {
+	if (nullptr != m_pCollider)
+	{
+		delete m_pCollider;
+	}
 }
 
-void CGameObject::update()
+void CGameObject::finalupdate()
 {
-
-
+	if (nullptr != m_pCollider)
+	{
+		m_pCollider->finalupdate();
+	}
 }
 
 void CGameObject::render(HDC hDC)
@@ -44,4 +53,16 @@ fPoint CGameObject::GetPos()
 fPoint CGameObject::GetScale()
 {
 	return m_fptScale;
+}
+
+CCollider* CGameObject::GetCollider()
+{
+	return m_pCollider;
+}
+
+void CGameObject::CreateCollider()
+{
+	//서로 서로의 위치를 주고받는 작업 쌍방향
+	m_pCollider = new CCollider();
+	m_pCollider->m_pOwner = this;
 }

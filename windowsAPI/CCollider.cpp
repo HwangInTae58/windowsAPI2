@@ -1,7 +1,6 @@
 #include "framework.h"
 #include "CCollider.h"
 #include "CGameObject.h"
-
 #include "SelectGDI.h"
 
 CCollider::CCollider()
@@ -46,10 +45,12 @@ void CCollider::SetScale(fPoint scale)
 	m_fptScale = scale;
 }
 
-void CCollider::finalupdate()
+void CCollider::finalupdate() // 이 작업을 매프레임마다 갱신
 {
-	fPoint fptObjectPos = m_pOwner->GetPos();
-	m_fptFinalPos = fptObjectPos + m_fptOffsetPos;
+	//오브젝트의 위치를 따라갈수있게 작업
+	fPoint fptObjectPos = m_pOwner->GetPos(); //오브젝트의 위치를 잡고
+	m_fptFinalPos = fptObjectPos + m_fptOffsetPos; //충돌체에 오프셋의 위치를 더해 
+	//오브젝트가 갖는 충돌체의 정확한 위치를 FinalPos에 저장한다.
 }
 
 void CCollider::render(HDC hDC)

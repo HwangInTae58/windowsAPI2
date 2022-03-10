@@ -15,9 +15,12 @@ struct fPoint
 		this->y = y;
 	}
 
-	fPoint operator=(const fPoint& other)
+	fPoint& operator=(const fPoint& other)
 	{
-		return fPoint(x = other.x, y = other.y);
+		x = other.x;
+		y = other.y;
+
+		return *this;
 	}
 
 	fPoint operator+(const fPoint& other)
@@ -28,6 +31,16 @@ struct fPoint
 	fPoint operator-(const fPoint& other)
 	{
 		return fPoint(x - other.x, y - other.y);
+	}
+	fPoint operator*(const fPoint& other)
+	{
+		return fPoint(x * other.x, y * other.y);
+	}
+	fPoint operator/(const fPoint& other)
+	{
+		//나누기는 분모가 0이면 계산이 되지 않으니 assert
+		assert(!(0.f == other.x, 0.f == other.y));
+		return fPoint(x / other.x, y / other.y);
 	}
 };
 
